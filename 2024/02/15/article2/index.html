@@ -29,15 +29,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1726852550110">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1745854569464">
 
-<link rel="stylesheet" href="/css/style.css?v=1726852550110">
+<link rel="stylesheet" href="/css/style.css?v=1745854569464">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1726852550110">
+        <link rel="stylesheet" href="/custom.css?v=1745854569464">
     
 
 
@@ -47,7 +47,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1726852550111"></script>
+<script async src="/js/app.js?v=1745854569465"></script>
 
  
 
@@ -60,18 +60,22 @@
 
   gtag('config', 'G-ZE249RJZ6F');
   </script>
-  <div id="aplayer"></div>  
+ 
+<div id="aplayer"></div>
 
 
 <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
 
 <link rel="stylesheet" href="/aplayer.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/js/jquery.pjax.js"></script>
 <script src="/js/aplayer.js"></script>
 <script src="/js/Meting.js"></script>
-<meting-js
-	server="netease"
-	type="playlist"
-	id="60198">
+<script src="/js/waifupicsapi.js" type="module"></script>
+<meting-js 
+        server="netease" 
+        type="playlist" 
+        id="60198">
 </meting-js><meta name="generator" content="Hexo 7.0.0"></head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(https://p.sda1.dev/14/28bc81c2e12a733add66a69b8d82cafa/16ad22a0987f735ade7d7ab2d1a005e9d7905cb6.jpg@1256w_878h_!web-article-pic.webp)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer"></div><a class="mdui-btn mdui-btn-icon" href="/" title="Hu Xinyu"><img src="https://p.sda1.dev/14/4ce22af2179a107a0e0128a0f99b01b3/b_528a420179c4a08a024642a632678eff.jpg" alt="Hu Xinyu"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
     <div class="nexmoe-avatar mdui-ripple">
         <a href="/" title="Hu Xinyu">
@@ -79,7 +83,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>5</div>
+        <div><span>文章</span>4</div>
         <div><span>标签</span>0</div>
         <div><span>分类</span>1</div>
     </div>
@@ -228,7 +232,7 @@
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">文章归档</h3>
     <div class="nexmoe-widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -244,10 +248,6 @@
         
           <li>
             <a href="/2024/09/21/article4/">新增音乐播放器和流量分析系统</a>
-          </li>
-        
-          <li>
-            <a href="/2024/09/15/contemporary/">王俊铸是我儿</a>
           </li>
         
           <li>
@@ -297,11 +297,26 @@
     
    
     <div class="nexmoe-copyright">
-        &copy; 2024 Hu Xinyu
+        &copy; 2025 Hu Xinyu
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         <br><a href="https://icp.gov.moe/?keyword=20248899" target="_blank">萌ICP备20248899号</a>
 <br><a target="_blank" href="https://p.sda1.dev/">流浪图床</a>提供部分支持
+<script type="module">
+  import { getWaifuImage } from "/js/waifupicsapi.js";
+
+  window.addEventListener('load', async () => {
+    try {
+      const result = await getWaifuImage();
+      const img = document.createElement('img');
+      img.src = result.url;
+      img.style.width = '300px'; 
+      document.body.appendChild(img);
+    } catch (error) {
+      console.error('获取图片失败:', error);
+    }
+  });
+</script>       
 
     </div>
 </div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
@@ -365,17 +380,17 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1726852550056"></script>
+    <script async src="/js/copy-codeblock.js?v=1745854569431"></script>
   
 
   
       <div class="nexmoe-post-footer">
           <script src="https://utteranc.es/client.js"
-       repo="NightDust981989/Comment-Base"
-       issue-term="pathname"
-       theme="preferred-color-scheme"
-       crossorigin="anonymous"
-       async></script>
+      repo="NightDust981989/Comment-Base"
+      issue-term="pathname"
+      theme="preferred-color-scheme"
+      crossorigin="anonymous"
+      async></script>
 
       </div>
   
@@ -399,5 +414,4 @@
             <a href="#nexmoe-content" class="backtop toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
         </div>
     </div>
-</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
-</div></body></html>
+</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div></div></body></html>
